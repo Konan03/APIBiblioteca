@@ -1,10 +1,10 @@
 package com.biblioteca.biblioteca.service;
 
 import com.biblioteca.biblioteca.client.LibroClient;
+import com.biblioteca.biblioteca.dto.PrestamoRequestDTO;
 import com.biblioteca.biblioteca.model.Estudiante;
 import com.biblioteca.biblioteca.model.Libro;
 import com.biblioteca.biblioteca.model.Prestamo;
-import com.biblioteca.biblioteca.model.PrestamoRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -22,7 +22,7 @@ public class PrestamoService {
 
 
     // CREATE
-    public Prestamo crear(PrestamoRequest request) {
+    public Prestamo crear(PrestamoRequestDTO request) {
 
         // El estudiante está en esta API
         Estudiante estudiante =

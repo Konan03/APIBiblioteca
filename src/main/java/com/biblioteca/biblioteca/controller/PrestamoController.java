@@ -1,9 +1,8 @@
 package com.biblioteca.biblioteca.controller;
 
 
-import com.biblioteca.biblioteca.client.LibroClient;
+import com.biblioteca.biblioteca.dto.PrestamoRequestDTO;
 import com.biblioteca.biblioteca.model.Prestamo;
-import com.biblioteca.biblioteca.model.PrestamoRequest;
 import com.biblioteca.biblioteca.service.PrestamoService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -23,7 +22,7 @@ public class PrestamoController {
     // CREATE
     // POST /api/prestamos
     @PostMapping
-    public ResponseEntity<?> crear(@RequestBody PrestamoRequest request) {
+    public ResponseEntity<?> crear(@RequestBody PrestamoRequestDTO request) {
 
         Prestamo prestamo = prestamoService.crear(request);
 
